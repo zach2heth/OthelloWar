@@ -1,0 +1,43 @@
+
+Key for status of Block
+
+ 0 = DeadBlock
+ 1 = NeutralBlock
+ 2 = ColorBlock
+ 3 = SpawnBlock
+ 4 = ObjectiveBlock
+ 5 = GuardBlock
+ 6 = TrueNeutralBlock
+ ---------------------
+ 7 = Teleportation Block? (maybe entry and exit blocks)
+ 8 = Redirection Block? (Arrow that pushes unit in that direction when stepped on)
+
+Block Colors
+
+ 100 = Neutral
+ 99 = red
+ 88 = blue
+ 77 = green
+ 66 = yellow
+
+Line Colors
+
+ 1 = Normal
+ 2 = Select Block
+
+Unit
+
+1 = Fighter
+2 = Paver
+3 = Cleaner
+------------
+4 = Shooter
+5 = Shield
+6 = Builder (creates certain types of blocks like teleportation or redirection or temp shields)
+
+Unit Movement
+
+1 = North
+2 = East
+3 = South
+4 = West
