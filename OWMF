@@ -1,0 +1,90 @@
+run: moveSrc compile runOthelloWar moveClass
+
+compile: EZ.class Action.class Block.class Cleaner.class Fighter.class GBlock.class GCleaner.class GFighter.class GPaver.class GGrid.class GFighter.class GPlayer.class GAction.class GWar.class GWarInterface.class Grid.class GUnit.class Map.class Paver.class Player.class test.class Unit.class War.class OthelloWar.class
+
+runOthelloWar:
+	-java OthelloWar 10
+
+runTest: compile
+	-java test
+
+moveClass:
+	-mv *.class class
+
+moveSrc: moveClass
+	-mv /Users/Steinsgard/documents/forfuncode/othellowar/src/class/*.class /Users/Steinsgard/documents/forfuncode/othellowar/src
+
+clean:
+	rm *.class
+
+backup: compile
+	cp *.java /Users/Steinsgard/documents/forfuncode/othellowar/src/backUp
+
+EZ.class: EZ.java
+	javac EZ.java
+
+Action.class: Action.java
+	javac Action.java
+
+Block.class: Block.java
+	javac Block.java
+
+Cleaner.class: Cleaner.java
+	javac Cleaner.java
+
+Fighter.class: Fighter.java
+	javac Fighter.java
+
+GBlock.class: GBlock.java
+	javac GBlock.java
+
+GCleaner.class: GCleaner.java
+	javac GCleaner.java
+
+GFighter.class: GFighter.java
+	javac GFighter.java
+
+GGrid.class: GGrid.java
+	javac GGrid.java
+
+GPaver.class: GPaver.java
+	javac GPaver.java
+
+GPlayer.class: GPlayer.java
+	javac GPlayer.java
+
+GAction.class: GAction.java
+	javac GAction.java
+
+GWar.class: GWar.java
+	javac GWar.java
+
+GWarInterface.class: GWarInterface.java
+	javac GWarInterface.java
+
+Grid.class: Grid.java
+	javac Grid.java
+
+GUnit.class: GUnit.java
+	javac GUnit.java
+
+Map.class: Map.java
+	javac Map.java
+
+Paver.class: Paver.java
+	javac Paver.java
+
+Player.class: Player.java
+	javac Player.java
+
+test.class: test.java
+	javac test.java
+
+Unit.class: Unit.java
+	javac Unit.java
+
+War.class: War.java
+	javac War.java
+
+OthelloWar.class: OthelloWar.java
+	javac OthelloWar.java
