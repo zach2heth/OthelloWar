@@ -1,0 +1,66 @@
+
+--------------------------------------------------------------------------------
+Overview
+    The main mechanic of the game works similar to Othello, where a block
+    is placed and all blocks between two that are the same color, will change
+    into that color. However, in this game, not only do enemy pieces convert colors
+    but neutral blocks can change colors.
+    This game also has units which move along those blocks.
+Objective
+    Move a unit onto one of the opponent's ObjectiveBlocks.
+PlayerTurn
+    There are three different actions that can be taken in any order
+    1)Place a CB
+        A CB can only be placed if it will result in a CC of at least one block
+    2)Move Units
+        All units can move and take an action once a turn
+    3)Move a GuardBlock
+        Only one GuardBlock can be moved per turn
+    At the end of a turn, the player must decide what kind of unit will
+    will be created on the SB at the start of their next turn.
+Definitions/Rules
+  NeutralBlock (NeB)
+      Blocks with no assigned color. Cannot be crossed by any units.
+  ColorBlock (CB)
+      A block with a specified color that represents a player.
+  Color Change (CC)
+      When a CB is placed, if there exists a CB in the same row or column
+      all NeBs and CBs between the same colored CB's will change to that color.
+      If there are multiple CB's of the same color in the same row/column,
+      Only the blocks that are within the range of the first occurring CB will
+      change colors. To instigate a CC, a CB can be placed on a NeB or
+      on an open CB of the same color.
+  GuardBlock
+      Blocks that cannot be passed through by units, or be CC'd. It will also
+      prevent a CC from occurring if in the path between CBs of the same color.
+      They can be placed on any NeB, or the player's own CBs
+  TrueNeutralBlock (TNB)
+      These blocks cannot be CC'd and will prevent a CC like a GuardBlock,
+      but they can be passed by units of both sides
+  DeadBlock
+      Blocks on the screen that cannot be interacted with.
+      They cannot be CC'd, GuardBlocks cannot be placed there, and so forth
+  ObjectiveBlock (ObjB)
+      The blocks that needs to be captured to win. GuardBlocks cannot be placed on it.
+      It cannot be CC'd. To capture an ObjB, an opposing unit be adjacent to it
+      Can either be turned into a DeadBlock, or change to opponents color
+  SpawnBlock (SB)
+      Units are produced here at the start of a turn. If a unit already exists
+      on the SB, a new unit will not be created. They cannot be CC'd.
+      They will prevent CC's like a GuardBlock.
+
+  Unit
+      Objects that can move along blocks of their own color. They are used to
+      capture the goal. Units can move any number of spaces in one direction per turn
+      They are destroyed if on a block that is CC'd to an opposing color
+      They can choose to self-destruct as well
+      Fighter - These can destroy adjacent units (including allies)
+      Paver - Can convert one NeB or unoccupied CB into their color
+      Cleaner - Can convert an unoccupied CB into a NeB
+      Shooter - Convert Neb or unoccupied CB into their color from a range
+      Shield - Protect adjacent units from being destroyed.
+
+
+
+
+--------------------------------------------------------------------------------
